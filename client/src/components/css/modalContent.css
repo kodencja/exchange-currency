@@ -1,0 +1,58 @@
+.dialog-question {
+  color: rgb(39, 39, 41);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.dev-box {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.close-btn {
+  background-color: gainsboro !important;
+  margin: 1rem auto 1rem auto;
+}
+
+.close-btn:hover {
+  background-color: rgb(194, 194, 194) !important;
+}
+
+.aside-code {
+  text-align: right;
+}
+
+.code-content {
+  font-weight: 700;
+}
+
+.title-code {
+  font-weight: 600;
+  background-color: #9ebfc5;
+  text-align: center;
+}
+
+.btn-close2 {
+  text-align: right;
+  margin-right: 0px;
+  margin-bottom: 15px;
+  margin-top: -10px;
+  font-size: 0.8em !important;
+}
+
+.backend-info {
+  text-align: left;
+}
+
+.pre-code {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

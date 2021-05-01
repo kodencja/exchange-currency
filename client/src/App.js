@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useMemo, lazy, Suspense } from "react";
+import Footer from "./components/Footer";
+
+const CurrForm = lazy(() => import("./components/CurrForm"));
+const ModalComp = lazy(() => import("./components/ModalComp"));
+
+export const ModalContext = React.createContext();
 
 function App() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const valueModalContext = useMemo(() => {
+    return {
+      modalIsOpen,
+      setModalIsOpen,
+    };
+  }, [modalIsOpen]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <header className="title">LET'S CHECK EXCHANGE RATE</header>
+        <div className="section-form">
+          <Suspense fallback={<p>Loading...</p>}>
+            <CurrForm />
+          </Suspense>
+        </div>
+      </main>
+      <Footer onModalOpen={setModalIsOpen} />
+      <Suspense fallback={<p>Loading...</p>}>
+        <ModalContext.Provider value={valueModalContext}>
+          <ModalComp />
+        </ModalContext.Provider>
+      </Suspense>
     </div>
   );
 }
