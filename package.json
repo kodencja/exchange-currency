@@ -7,8 +7,8 @@
     "server": "nodemon server.js",
     "client": "cd client && npm start",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "build": "cd client && npm run build",
-    "install": "cd client && npm run build && cd .."
+    "build": "cd client && npm install && npm run build",
+    "install": "cd client && npm install && npm run build && cd .."
   },
   "author": "",
   "license": "ISC",
