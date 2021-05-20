@@ -56,13 +56,22 @@ function ModalContent() {
             appropriately.
           </p>
         </div>
+        <a
+          href="https://github.com/kodencja/exchange-currency"
+          target="_blank"
+          rel="noreferrer"
+        >
+          See the code on GitHub
+        </a>
         <aside className="aside-code">
           {" "}
           <button
             className="btn btn-sm close-btn border-dark"
             onClick={() => setIfBackendCodeShow(!ifBackendCodeShow)}
           >
-            {ifBackendCodeShow ? "Hide the code" : "Show me the code"}
+            {ifBackendCodeShow
+              ? "Hide the back-end code"
+              : "Show me the back-end code"}
           </button>
           <div className={backendDivStyle}>
             <div className="code-content h4">BackEnd code</div>

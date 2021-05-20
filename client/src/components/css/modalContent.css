@@ -17,6 +17,17 @@
   line-height: 1.4;
 }
 
+.dev-box a {
+  color: darkslategrey;
+  font-weight: 700;
+  float: left;
+  text-decoration: none;
+}
+
+.dev-box a:hover {
+  color: rgb(60, 100, 100);
+}
+
 .close-btn {
   background-color: gainsboro !important;
   margin: 1rem auto 1rem auto;

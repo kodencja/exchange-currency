@@ -62,7 +62,9 @@ const initState = {
   amount: 1,
 };
 
-const urlExchangeRate = "https://api.ratesapi.io/api/latest";
+// const urlExchangeRate = "https://api.ratesapi.io/api/latest";
+const urlExchangeRate =
+  "http://data.fixer.io/api/latest?access_key=2ce7794e100ce6cb6011d2e33e3932b1&format=1";
 const urlCountries = "https://restcountries.eu/rest/v2/currency";
 
 function CurrForm({ children }) {

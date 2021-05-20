@@ -3,7 +3,11 @@ import React from "react";
 function Footer({ onModalOpen }) {
   return (
     <footer className="down-buttons">
-      <a href="https://codencja.herokuapp.com/">
+      <a
+        href="https://codencja.herokuapp.com/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <button type="link" className="btn-down home-page-link">
           Back to Home Page
         </button>

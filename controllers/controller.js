@@ -76,7 +76,8 @@ const checkIfValidationSuccess = (feedbackObj) => {
 
 const countries = async (req, res, next) => {
   console.log("feedback start");
-  console.log(feedback);
+  // console.log(feedback);
+  // console.log(req.query.urlAddress);
 
   await handleValidation(req.query.toCurrency, "currToCheck", "isAlpha", 3, 3);
 
@@ -124,6 +125,8 @@ const exchange = async (req, res) => {
   const toCurr = req.query.toCurrency;
   const fromCurr = req.query.fromCurrency;
   const figure = req.query.amount;
+  // console.log("EXCHANGE ctrller");
+  // console.log(req.query.urlAddress);
 
   await handleValidation(fromCurr, "currFromCheck", "isAlpha", 3, 3);
   await handleValidation(figure, "amountCheck", "isNumeric", 1, 7);
