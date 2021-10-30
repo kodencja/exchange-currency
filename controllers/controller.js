@@ -93,8 +93,9 @@ const countries = async (req, res, next) => {
           feedback.success = true;
 
           const fitCountries = response.data.map(
-            (country) => " " + country.name
+            (country) => country.name + ", "
           );
+          // console.log("fitCountries: ", fitCountries);
           feedback.fitCountries = fitCountries;
           res.json(feedback);
           feedback = { ...feedbackInit };
